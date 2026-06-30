@@ -51,7 +51,7 @@ class DatabaseSeeder extends Seeder
             ['title' => 'Schwinn Discover Hybrid Bike', 'price' => 220.00, 'condition' => 'Used', 'images' => ['https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600&h=400&fit=crop']],
         ],
         'Toys' => [
-            ['title' => 'LEGO Star Wars Millennium Falcon', 'price' => 129.99, 'condition' => 'New', 'images' => ['https://images.unsplash.com/photo-1472586663735-54569ff16a7e?w=600&h=400&fit=crop']],
+            ['title' => 'LEGO Star Wars Millennium Falcon', 'price' => 129.99, 'condition' => 'New', 'images' => ['https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=600&h=400&fit=crop']],
             ['title' => 'Nintendo Switch OLED Console', 'price' => 299.00, 'condition' => 'Like New', 'images' => ['https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?w=600&h=400&fit=crop']],
             ['title' => 'Hot Wheels Ultimate Garage Playset', 'price' => 45.00, 'condition' => 'Good', 'images' => ['https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=600&h=400&fit=crop']],
             ['title' => 'Rubik\'s Cube 3x3 Speed Cube', 'price' => 12.99, 'condition' => 'New', 'images' => ['https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=600&h=400&fit=crop']],

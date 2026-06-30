@@ -249,19 +249,25 @@ export default function Index({ auth, products, queryParams }) {
                             {products.links.length > 3 && (
                                 <div className="flex items-center justify-center gap-1.5 mt-10">
                                     {products.links.map((link, idx) => (
-                                        <Link
-                                            key={idx}
-                                            href={link.url || '#'}
-                                            disabled={!link.url}
-                                            className={`px-3.5 py-2 text-xs font-bold rounded-xl transition ${
-                                                link.active
-                                                    ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
-                                                    : link.url
-                                                    ? 'bg-white border border-slate-200/80 hover:bg-slate-50 text-slate-700 dark:bg-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:text-slate-300'
-                                                    : 'text-slate-400 cursor-not-allowed dark:text-slate-600'
-                                            }`}
-                                            dangerouslySetInnerHTML={{ __html: link.label }}
-                                        />
+                                        link.url ? (
+                                            <Link
+                                                key={idx}
+                                                href={link.url}
+                                                preserveState
+                                                className={`px-3.5 py-2 text-xs font-bold rounded-xl transition ${
+                                                    link.active
+                                                        ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
+                                                        : 'bg-white border border-slate-200/80 hover:bg-slate-50 text-slate-700 dark:bg-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:text-slate-300'
+                                                }`}
+                                                dangerouslySetInnerHTML={{ __html: link.label }}
+                                            />
+                                        ) : (
+                                            <span
+                                                key={idx}
+                                                className="px-3.5 py-2 text-xs font-bold rounded-xl text-slate-400 cursor-not-allowed dark:text-slate-600"
+                                                dangerouslySetInnerHTML={{ __html: link.label }}
+                                            />
+                                        )
                                     ))}
                                 </div>
                             )}
