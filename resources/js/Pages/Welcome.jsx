@@ -8,12 +8,6 @@ import {
     ArrowRight, 
     Tag, 
     MapPin, 
-    Smartphone, 
-    BookOpen, 
-    Shirt, 
-    Armchair, 
-    Gamepad2, 
-    Dribbble, 
     ChevronRight,
     Star
 } from 'lucide-react';
@@ -22,17 +16,17 @@ export default function Welcome({ auth, featuredProducts, stats, categories }) {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('All');
 
-    // Helper to map category names to Lucide icons
-    const getCategoryIcon = (name) => {
-        switch (name.toLowerCase()) {
-            case 'electronics': return <Smartphone className="h-6 w-6" />;
-            case 'books': return <BookOpen className="h-6 w-6" />;
-            case 'clothing': return <Shirt className="h-6 w-6" />;
-            case 'furniture': return <Armchair className="h-6 w-6" />;
-            case 'toys': return <Gamepad2 className="h-6 w-6" />;
-            case 'sports': return <Dribbble className="h-6 w-6" />;
-            default: return <Tag className="h-6 w-6" />;
-        }
+    // Map category names to relevant images
+    const getCategoryImage = (name) => {
+        const images = {
+            'electronics': 'https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=400&h=300&fit=crop',
+            'books': 'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=400&h=300&fit=crop',
+            'clothing': 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=300&fit=crop',
+            'furniture': 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=400&h=300&fit=crop',
+            'toys': 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=300&fit=crop',
+            'sports': 'https://images.unsplash.com/photo-1461896836934-bd45ba8fcf9b?w=400&h=300&fit=crop',
+        };
+        return images[name.toLowerCase()] || 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=300&fit=crop';
     };
 
     return (
@@ -172,13 +166,20 @@ export default function Welcome({ auth, featuredProducts, stats, categories }) {
                         <Link
                             key={idx}
                             href={route('product.index', { category: cat.name })}
-                            className="p-6 bg-slate-800/40 border border-slate-800 hover:border-blue-500/50 rounded-2xl flex flex-col items-center justify-center text-center transition group hover:bg-slate-800/70"
+                            className="p-0 bg-slate-800/40 border border-slate-800 hover:border-blue-500/50 rounded-2xl flex flex-col overflow-hidden transition group hover:bg-slate-800/70"
                         >
-                            <div className="h-12 w-12 bg-slate-800 rounded-xl flex items-center justify-center text-slate-400 group-hover:text-blue-400 group-hover:bg-blue-500/10 transition mb-4">
-                                {getCategoryIcon(cat.name)}
+                            <div className="relative aspect-[4/3] overflow-hidden">
+                                <img
+                                    src={getCategoryImage(cat.name)}
+                                    alt={cat.name}
+                                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
                             </div>
-                            <span className="font-bold text-sm text-slate-200 group-hover:text-white transition">{cat.name}</span>
-                            <span className="text-xs text-slate-500 mt-1 font-semibold">{cat.count} listings</span>
+                            <div className="px-4 py-3 text-center">
+                                <span className="font-bold text-sm text-slate-200 group-hover:text-white transition">{cat.name}</span>
+                                <span className="text-xs text-slate-500 mt-1 block font-semibold">{cat.count} listings</span>
+                            </div>
                         </Link>
                     ))}
                 </div>

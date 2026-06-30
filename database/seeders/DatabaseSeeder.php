@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
             ['title' => 'IKEA KALLAX Shelf Unit', 'price' => 69.99, 'condition' => 'Like New', 'images' => ['https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=400&fit=crop']],
             ['title' => 'Herman Miller Aeron Chair', 'price' => 450.00, 'condition' => 'Good', 'images' => ['https://images.unsplash.com/photo-1592078615290-033ee584e267?w=600&h=400&fit=crop']],
             ['title' => 'Mid-Century Modern Coffee Table', 'price' => 135.00, 'condition' => 'Used', 'images' => ['https://images.unsplash.com/photo-1532372320572-cda25653a26d?w=600&h=400&fit=crop']],
-            ['title' => 'West Elm Velvet Sofa', 'price' => 380.00, 'condition' => 'Good', 'images' => ['https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=400&fit=crop']],
+            ['title' => 'West Elm Velvet Sofa', 'price' => 380.00, 'condition' => 'Good', 'images' => ['https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?w=600&h=400&fit=crop']],
         ],
         'Sports' => [
             ['title' => 'Spalding NBA Official Basketball', 'price' => 29.99, 'condition' => 'New', 'images' => ['https://images.unsplash.com/photo-1519861531473-9200262188bf?w=600&h=400&fit=crop']],
@@ -51,7 +51,7 @@ class DatabaseSeeder extends Seeder
             ['title' => 'Schwinn Discover Hybrid Bike', 'price' => 220.00, 'condition' => 'Used', 'images' => ['https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600&h=400&fit=crop']],
         ],
         'Toys' => [
-            ['title' => 'LEGO Star Wars Millennium Falcon', 'price' => 129.99, 'condition' => 'New', 'images' => ['https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=600&h=400&fit=crop']],
+            ['title' => 'LEGO Star Wars Millennium Falcon', 'price' => 129.99, 'condition' => 'New', 'images' => ['https://images.unsplash.com/photo-1472586663735-54569ff16a7e?w=600&h=400&fit=crop']],
             ['title' => 'Nintendo Switch OLED Console', 'price' => 299.00, 'condition' => 'Like New', 'images' => ['https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?w=600&h=400&fit=crop']],
             ['title' => 'Hot Wheels Ultimate Garage Playset', 'price' => 45.00, 'condition' => 'Good', 'images' => ['https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=600&h=400&fit=crop']],
             ['title' => 'Rubik\'s Cube 3x3 Speed Cube', 'price' => 12.99, 'condition' => 'New', 'images' => ['https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=600&h=400&fit=crop']],
