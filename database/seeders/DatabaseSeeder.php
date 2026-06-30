@@ -60,6 +60,10 @@ class DatabaseSeeder extends Seeder
 
     public function run(): void
     {
+        if (User::count() > 0) {
+            return;
+        }
+
         // 1. Create standard seed accounts
         $admin = User::factory()->create([
             'name' => 'Admin User',

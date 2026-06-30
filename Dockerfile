@@ -27,4 +27,4 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction \
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "php artisan config:clear && php artisan route:clear && php artisan view:clear && php artisan storage:link --force && php artisan migrate:fresh --seed --force && php artisan serve --host=0.0.0.0 --port=${PORT:-8080}"]
+CMD ["sh", "-c", "php artisan config:clear; php artisan route:clear; php artisan view:clear; php artisan storage:link --force; php artisan migrate --force; php artisan db:seed --force; php artisan serve --host=0.0.0.0 --port=${PORT:-8080}"]
