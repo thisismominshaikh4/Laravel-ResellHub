@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
             ['title' => 'Levi\'s 501 Original Fit Jeans', 'price' => 45.00, 'condition' => 'Like New', 'images' => ['https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&h=400&fit=crop']],
             ['title' => 'Nike Air Max 270 Running Shoes', 'price' => 89.99, 'condition' => 'New', 'images' => ['https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=400&fit=crop']],
             ['title' => 'The North Face Puffer Jacket', 'price' => 120.00, 'condition' => 'Good', 'images' => ['https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&h=400&fit=crop']],
-            ['title' => 'Adidas Originals Trefoil Hoodie', 'price' => 55.00, 'condition' => 'Used', 'images' => ['https://images.unsplash.com/photo-1556821840-3a63f7560067?w=600&h=400&fit=crop']],
+            ['title' => 'Adidas Originals Trefoil Hoodie', 'price' => 55.00, 'condition' => 'Used', 'images' => ['https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&h=400&fit=crop']],
             ['title' => 'Ray-Ban Aviator Sunglasses', 'price' => 75.00, 'condition' => 'New', 'images' => ['https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&h=400&fit=crop']],
         ],
         'Furniture' => [
