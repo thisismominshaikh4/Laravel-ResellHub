@@ -60,9 +60,8 @@ class DatabaseSeeder extends Seeder
 
     public function run(): void
     {
-        if (DB::table('products')->count() > 0) {
-            return;
-        }
+        // Clear all seeded data (order matters due to FK constraints)
+        DB::statement('TRUNCATE reviews, orders, payments, alerts, reports, products, users CASCADE');
 
         // 1. Create standard seed accounts
         $admin = User::factory()->create([
