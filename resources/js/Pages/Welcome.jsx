@@ -23,10 +23,10 @@ export default function Welcome({ auth, featuredProducts, stats, categories }) {
             'books': 'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=400&h=300&fit=crop',
             'clothing': 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=300&fit=crop',
             'furniture': 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=400&h=300&fit=crop',
-            'toys': 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=300&fit=crop',
-            'sports': 'https://images.unsplash.com/photo-1461896836934-bd45ba8fcf9b?w=400&h=300&fit=crop',
+            'toys': 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=400&h=300&fit=crop',
+            'sports': 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=300&fit=crop',
         };
-        return images[name.toLowerCase()] || 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=300&fit=crop';
+        return images[name.toLowerCase()] || 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&h=300&fit=crop';
     };
 
     return (
